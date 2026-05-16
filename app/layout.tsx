@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "수학 교육 사이트",
+  title: "MathEdu-수학 교육 사이트",
   description: "누구나 쉽게 배우는 수학 교육 웹서비스",
 };
 
@@ -20,14 +20,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div className="flex-shrink-0 flex items-center cursor-pointer">
               {/* 서비스 로고(수학) */}
-              <Link href="/" className="flex items-center text-xl sm:text-2xl font-bold text-rose-500 dark:text-rose-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                  <line x1="9" x2="9" y1="4" y2="20" />
-                  <path d="M4 7c0-1.7 1.3-3 3-3h13" />
-                  <path d="M18 20c-1.7 0-3-1.3-3-3V4" />
-                </svg>
-                MathEdu-수학 교육 사이트
-              </Link>
+              <Link href="/" className="text-2xl font-bold text-rose-500 dark:text-rose-400">MathEdu</Link>
             </div>
             <nav className="hidden md:block">
               {/* 여기에 새로운 네비게이션 아이템 컴포넌트를 추가하세요 */}
