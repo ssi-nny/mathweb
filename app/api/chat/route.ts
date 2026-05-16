@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       messages,
     });
 
-    return result.toDataStreamResponse();
+    return result.toTextStreamResponse();
   } catch (error) {
     console.error("AI 챗봇 오류:", error);
     return new Response(JSON.stringify({ error: "AI 응답을 생성하는 중 오류가 발생했습니다." }), {
