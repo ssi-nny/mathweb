@@ -14,9 +14,7 @@
     "react-dom": "^18",
     "next": "14.2.3",
     "@prisma/client": "^5.14.0",
-    "ai": "latest",
-    "@ai-sdk/openai": "latest",
-    "@ai-sdk/react": "latest"
+    "openai": "^4.52.0"
   },
   "devDependencies": {
     "prisma": "^5.14.0",
