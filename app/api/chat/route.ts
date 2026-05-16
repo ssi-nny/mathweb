@@ -9,6 +9,7 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     const result = await streamText({
+      // @ts-ignore: Bypass type conflicts caused by mismatched @ai-sdk/provider versions in Vercel
       model: openai('gpt-3.5-turbo'),
       system: "당신은 친절하고 전문적인 수학 교육 전문가 'MathEdu AI 튜터'입니다. 학생이 수학 질문을 하면 친절하고 이해하기 쉽게 단계적으로 설명해주세요. 정답만 바로 알려주기보다는 풀이 과정을 스스로 이해할 수 있도록 유도해주는 것이 좋습니다. 출력은 마크다운(Markdown) 형식을 사용하여 수식이나 코드를 깔끔하게 보여주세요.",
       messages,
