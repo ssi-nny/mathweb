@@ -14,3 +14,10 @@ model User {
   name      String?
   createdAt DateTime @default(now())
 }
+
+model Guestbook {
+  id        Int      @id @default(autoincrement())
+  name      String
+  message   String
+  createdAt DateTime @default(now())
+}

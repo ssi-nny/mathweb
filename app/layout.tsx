@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,14 +20,15 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div className="flex-shrink-0 flex items-center cursor-pointer">
               {/* 서비스 로고(수학) */}
-              <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">MathEdu</span>
+              <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">MathEdu</Link>
             </div>
             <nav className="hidden md:block">
               {/* 여기에 새로운 네비게이션 아이템 컴포넌트를 추가하세요 */}
-              <ul className="flex space-x-8">
-                <li><a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium">학습하기</a></li>
-                <li><a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium">커뮤니티</a></li>
-                <li><a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium">마이페이지</a></li>
+              <ul className="flex space-x-8 items-center">
+                <li><Link href="/learn" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">학습하기</Link></li>
+                <li><Link href="/guestbook" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">방명록</Link></li>
+                <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">커뮤니티</Link></li>
+                <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">마이페이지</Link></li>
               </ul>
             </nav>
             {/* 모바일 메뉴 버튼 (기능 확장을 위한 플레이스홀더) */}

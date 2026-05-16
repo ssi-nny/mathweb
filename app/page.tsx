@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex-grow flex items-center justify-center bg-gray-50 dark:bg-zinc-950 w-full">
@@ -22,9 +24,9 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
           {/* 가짜(Placeholder) 버튼 1개 */}
           {/* 여기에 회원가입 모달 열기, 또는 학습 페이지 이동 등 새로운 컴포넌트를 추가하세요 */}
-          <button className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
-            학습 시작하기 (기능 준비중)
-          </button>
+          <Link href="/learn" className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-center">
+            학습 시작하기
+          </Link>
           
           <button className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-semibold rounded-xl text-blue-600 bg-white border-2 border-blue-100 hover:border-blue-200 dark:text-blue-400 dark:bg-transparent dark:border-blue-800 dark:hover:border-blue-700 transition-colors">
             둘러보기
