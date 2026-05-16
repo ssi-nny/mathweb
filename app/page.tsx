@@ -1,8 +1,10 @@
 import Link from "next/link";
+import CherryBlossom from "./components/CherryBlossom";
 
 export default function Home() {
   return (
-    <div className="flex-grow flex items-center justify-center bg-gray-50 dark:bg-zinc-950 w-full">
+    <div className="flex-grow flex items-center justify-center bg-gray-50 dark:bg-zinc-950 w-full relative">
+      <CherryBlossom />
       {/* 메인 화면(Hero Section) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center justify-center min-h-[60vh]">
         
