@@ -66,7 +66,7 @@ export default function TopicProblemPage({ params }: { params: { topicId: string
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-      <Link href="/learn" className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8 font-medium">
+      <Link href="/learn" className="inline-flex items-center text-rose-500 dark:text-rose-400 hover:underline mb-8 font-medium">
         <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
@@ -74,7 +74,7 @@ export default function TopicProblemPage({ params }: { params: { topicId: string
       </Link>
 
       <div className="bg-white dark:bg-zinc-900 rounded-3xl shadow-lg border border-gray-100 dark:border-zinc-800 overflow-hidden">
-        <div className="bg-blue-600 px-6 py-4 md:px-8 md:py-6">
+        <div className="bg-rose-500 px-6 py-4 md:px-8 md:py-6">
           <h1 className="text-2xl md:text-3xl font-bold text-white">
             {topicData.title} 실전 문제
           </h1>
@@ -96,9 +96,9 @@ export default function TopicProblemPage({ params }: { params: { topicId: string
               
               if (!isSubmitted) {
                 if (isSelected) {
-                  optionClasses += "border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300";
+                  optionClasses += "border-rose-500 bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300";
                 } else {
-                  optionClasses += "border-gray-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-zinc-800";
+                  optionClasses += "border-gray-200 dark:border-zinc-700 hover:border-rose-300 dark:hover:border-rose-700 bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-zinc-800";
                 }
               } else {
                 if (isCorrectOption) {
@@ -129,7 +129,7 @@ export default function TopicProblemPage({ params }: { params: { topicId: string
             <button
               onClick={handleSubmit}
               disabled={selectedOption === null}
-              className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
+              className="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white text-lg font-bold rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
             >
               정답 확인하기
             </button>

@@ -16,19 +16,26 @@ export default function RootLayout({
     <html lang="ko">
       <body className="min-h-screen flex flex-col antialiased">
         {/* 상단 헤더 컴포넌트 공간 */}
-        <header className="w-full bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800 sticky top-0 z-50">
+        <header className="w-full bg-white dark:bg-zinc-900 border-b border-rose-100 dark:border-rose-900/30 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div className="flex-shrink-0 flex items-center cursor-pointer">
               {/* 서비스 로고(수학) */}
-              <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">MathEdu</Link>
+              <Link href="/" className="flex items-center text-xl sm:text-2xl font-bold text-rose-500 dark:text-rose-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
+                  <line x1="9" x2="9" y1="4" y2="20" />
+                  <path d="M4 7c0-1.7 1.3-3 3-3h13" />
+                  <path d="M18 20c-1.7 0-3-1.3-3-3V4" />
+                </svg>
+                MathEdu-수학 교육 사이트
+              </Link>
             </div>
             <nav className="hidden md:block">
               {/* 여기에 새로운 네비게이션 아이템 컴포넌트를 추가하세요 */}
               <ul className="flex space-x-8 items-center">
-                <li><Link href="/learn" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">학습하기</Link></li>
-                <li><Link href="/guestbook" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">방명록</Link></li>
-                <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">커뮤니티</Link></li>
-                <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">마이페이지</Link></li>
+                <li><Link href="/learn" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">학습하기</Link></li>
+                <li><Link href="/guestbook" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">학습발걸음</Link></li>
+                <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">커뮤니티</Link></li>
+                <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">마이페이지</Link></li>
               </ul>
             </nav>
             {/* 모바일 메뉴 버튼 (기능 확장을 위한 플레이스홀더) */}

@@ -10,7 +10,7 @@ export default async function GuestbookPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-          방명록
+          학습발걸음
         </h1>
         <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
           자유롭게 메시지를 남겨보세요!
@@ -23,8 +23,8 @@ export default async function GuestbookPage() {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">최근 메시지 ({entries.length})</h2>
         
         {entries.length === 0 ? (
-          <p className="text-gray-500 dark:text-gray-400 text-center py-10 bg-gray-50 dark:bg-zinc-900/50 rounded-2xl border border-dashed border-gray-200 dark:border-zinc-800">
-            아직 작성된 방명록이 없습니다. 첫 번째 메시지를 남겨주세요!
+          <p className="text-gray-500 dark:text-gray-400 text-center py-10 bg-rose-50 dark:bg-rose-900/10 rounded-2xl border border-dashed border-rose-200 dark:border-rose-800">
+            아직 작성된 학습발걸음이 없습니다. 첫 번째 메시지를 남겨주세요!
           </p>
         ) : (
           <ul className="grid gap-4">

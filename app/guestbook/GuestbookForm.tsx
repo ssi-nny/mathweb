@@ -11,9 +11,9 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      className="px-6 py-2 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
     >
-      {pending ? "등록 중..." : "방명록 남기기"}
+      {pending ? "등록 중..." : "학습발걸음 남기기"}
     </button>
   );
 }
@@ -41,7 +41,7 @@ export default function GuestbookForm() {
           id="name"
           required
           maxLength={50}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-zinc-700 rounded-lg bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-zinc-700 rounded-lg bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none"
           placeholder="홍길동"
         />
       </div>
@@ -53,7 +53,7 @@ export default function GuestbookForm() {
           required
           maxLength={500}
           rows={3}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-zinc-700 rounded-lg bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-zinc-700 rounded-lg bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-white focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none resize-none"
           placeholder="여기에 메시지를 남겨주세요!"
         />
       </div>

@@ -7,12 +7,12 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center justify-center min-h-[60vh]">
         
         {/* 배지 (선택적 컴포넌트 추가 예시) */}
-        <div className="mb-8 inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900/30 px-3 py-1 text-sm font-semibold text-blue-600 dark:text-blue-400">
+        <div className="mb-8 inline-flex items-center rounded-full bg-rose-100 dark:bg-rose-900/30 px-3 py-1 text-sm font-semibold text-rose-600 dark:text-rose-400">
           <span>🎉 새로운 기능이 곧 추가됩니다!</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6">
-          <span className="block text-blue-600 dark:text-blue-500">수학 교육 사이트</span>
+          <span className="block text-rose-500 dark:text-rose-400">수학 교육 사이트</span>
           <span className="block mt-2">쉽고 재미있는 학습의 시작</span>
         </h1>
         
@@ -24,13 +24,13 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
           {/* 가짜(Placeholder) 버튼 1개 */}
           {/* 여기에 회원가입 모달 열기, 또는 학습 페이지 이동 등 새로운 컴포넌트를 추가하세요 */}
-          <Link href="/learn" className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-center">
+          <Link href="/levels" className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-bold rounded-xl text-white bg-rose-500 hover:bg-rose-600 dark:bg-rose-500 dark:hover:bg-rose-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-center">
             학습 시작하기
           </Link>
           
-          <button className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-semibold rounded-xl text-blue-600 bg-white border-2 border-blue-100 hover:border-blue-200 dark:text-blue-400 dark:bg-transparent dark:border-blue-800 dark:hover:border-blue-700 transition-colors">
-            둘러보기
-          </button>
+          <Link href="/guestbook" className="w-full sm:w-auto px-8 py-3 md:py-4 md:px-10 text-base md:text-lg font-semibold rounded-xl text-rose-500 bg-white border-2 border-rose-100 hover:border-rose-200 dark:text-rose-400 dark:bg-transparent dark:border-rose-800 dark:hover:border-rose-700 transition-colors text-center">
+            학습발걸음
+          </Link>
         </div>
         
       </section>
