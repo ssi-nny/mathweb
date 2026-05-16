@@ -26,7 +26,56 @@ export default function RootLayout({
             <nav className="hidden md:block">
               {/* 여기에 새로운 네비게이션 아이템 컴포넌트를 추가하세요 */}
               <ul className="flex space-x-8 items-center">
-                <li><Link href="/learn" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">학습하기</Link></li>
+                <li className="relative group/learn">
+                  <Link href="/levels" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors py-5 inline-block">학습하기</Link>
+                  {/* 1단계 드롭다운: 초/중/고 */}
+                  <div className="absolute left-0 top-full pt-1 invisible opacity-0 group-hover/learn:visible group-hover/learn:opacity-100 transition-all duration-200 z-50">
+                    <ul className="bg-white dark:bg-zinc-800 rounded-xl shadow-xl border border-gray-100 dark:border-zinc-700 py-2 w-40">
+                      {/* 초등학교 */}
+                      <li className="relative group/elem">
+                        <span className="flex items-center justify-between px-4 py-2.5 text-gray-700 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:text-rose-500 cursor-pointer text-sm font-medium transition-colors">
+                          초등학교
+                          <svg className="w-3 h-3 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                        </span>
+                        <div className="absolute left-full top-0 pl-1 invisible opacity-0 group-hover/elem:visible group-hover/elem:opacity-100 transition-all duration-200">
+                          <ul className="bg-white dark:bg-zinc-800 rounded-xl shadow-xl border border-gray-100 dark:border-zinc-700 py-2 w-32">
+                            {[1,2,3,4,5,6].map(g => (
+                              <li key={g}><span className="block px-4 py-2 text-gray-500 dark:text-gray-400 text-sm cursor-default">{g}학년 <span className="text-xs text-gray-400">(준비중)</span></span></li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      {/* 중학교 */}
+                      <li className="relative group/mid">
+                        <span className="flex items-center justify-between px-4 py-2.5 text-gray-700 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:text-rose-500 cursor-pointer text-sm font-medium transition-colors">
+                          중학교
+                          <svg className="w-3 h-3 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                        </span>
+                        <div className="absolute left-full top-0 pl-1 invisible opacity-0 group-hover/mid:visible group-hover/mid:opacity-100 transition-all duration-200">
+                          <ul className="bg-white dark:bg-zinc-800 rounded-xl shadow-xl border border-gray-100 dark:border-zinc-700 py-2 w-32">
+                            {[1,2,3].map(g => (
+                              <li key={g}><span className="block px-4 py-2 text-gray-500 dark:text-gray-400 text-sm cursor-default">{g}학년 <span className="text-xs text-gray-400">(준비중)</span></span></li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      {/* 고등학교 */}
+                      <li className="relative group/high">
+                        <span className="flex items-center justify-between px-4 py-2.5 text-gray-700 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:text-rose-500 cursor-pointer text-sm font-medium transition-colors">
+                          고등학교
+                          <svg className="w-3 h-3 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                        </span>
+                        <div className="absolute left-full top-0 pl-1 invisible opacity-0 group-hover/high:visible group-hover/high:opacity-100 transition-all duration-200">
+                          <ul className="bg-white dark:bg-zinc-800 rounded-xl shadow-xl border border-gray-100 dark:border-zinc-700 py-2 w-32">
+                            <li><Link href="/learn" className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:text-rose-500 text-sm transition-colors">1학년</Link></li>
+                            <li><span className="block px-4 py-2 text-gray-500 dark:text-gray-400 text-sm cursor-default">2학년 <span className="text-xs text-gray-400">(준비중)</span></span></li>
+                            <li><span className="block px-4 py-2 text-gray-500 dark:text-gray-400 text-sm cursor-default">3학년 <span className="text-xs text-gray-400">(준비중)</span></span></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
                 <li><Link href="/guestbook" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">학습발걸음</Link></li>
                 <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">커뮤니티</Link></li>
                 <li><Link href="#" className="text-gray-700 dark:text-gray-300 hover:text-rose-500 dark:hover:text-rose-400 font-medium transition-colors">마이페이지</Link></li>
