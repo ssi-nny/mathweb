@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Chatbot from "./components/Chatbot";
 
 export const metadata: Metadata = {
   title: "MathEdu-수학 교육 사이트",
@@ -60,6 +61,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Chatbot />
       </body>
     </html>
   );
